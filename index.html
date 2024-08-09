@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHPLEMENT COURSES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" onclick="openContactModal()">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Online Courses Hub</h1>
+    </header>
+
+    <main>
+        <section class="courses">
+            <h2>Available Courses</h2>
+            <div class="course-list">
+                <div class="course-item" onclick="showCourseDetails('course1')">
+                    <img src="images/download.png" alt="Course 1 Image">
+                    <h3>FRONT END MASTERY</h3>
+                    <p>Become a front end developer along with certification </p>
+                </div>
+                <div class="course-item" onclick="showCourseDetails('course2')">
+                    <img src="images/cover.jpg" alt="Course 2 Image">
+                    <h3>NEXT.Js Mastery</h3>
+                    <p>Become a pro in Next Js with this course</p>
+                </div>
+                <!-- Add more course items as needed -->
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Learn more about our mission and values.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Course Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for course details -->
+    <div id="course-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('course-modal')">&times;</span>
+            <h2 id="course-title"></h2>
+            <p id="course-description"></p>
+        </div>
+    </div>
+
+    <!-- Modal for contact form -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contact-modal')">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
